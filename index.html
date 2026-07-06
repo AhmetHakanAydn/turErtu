@@ -1,0 +1,747 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Isparta – Manavgat Yemekli Bot Turu | 2450₺ (Ulaşım + Bot + Yemek Dahil)</title>
+<meta name="description" content="Isparta'dan Manavgat'a günübirlik yemekli bot turu. Manavgat Irmağı – Boğaz – Side rotası. Ulaşım + bot turu + yemek dahil kişi başı 2450₺. Hemen kayıt olun." />
+<meta name="theme-color" content="#0b3d66" />
+
+<!-- Open Graph (WhatsApp/Instagram paylaşımları için) -->
+<meta property="og:title" content="Isparta – Manavgat Yemekli Bot Turu | 2450₺" />
+<meta property="og:description" content="Ulaşım + Bot + Yemek Dahil. Manavgat Irmağı – Boğaz – Side rotası. Sabah 07.00 Isparta'dan hareket." />
+<meta property="og:type" content="website" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+<style>
+/* =========================================================
+   ISPARTA – MANAVGAT BOT TURU  |  Tek dosya statik site
+   Düzenlenecek tüm ayarlar sayfanın SONUNDAKI <script> içindeki
+   CONFIG bloğundadır (WhatsApp no, tarih, kontenjan, fiyat).
+   ========================================================= */
+
+:root{
+  --navy:#0b3d66;
+  --navy-2:#0a3357;
+  --blue:#1f7fc4;
+  --blue-light:#38a7e0;
+  --sky:#7cc6ef;
+  --orange:#f6a623;
+  --orange-2:#ff8f1f;
+  --turquoise:#1bb2b5;
+  --ink:#122a3d;
+  --muted:#5c7183;
+  --bg:#f2f8fc;
+  --card:#ffffff;
+  --line:#e2edf4;
+  --ok:#25a35a;
+  --shadow:0 12px 32px rgba(11,61,102,.12);
+  --shadow-lg:0 22px 60px rgba(11,61,102,.22);
+  --radius:20px;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:"Poppins",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  color:var(--ink);
+  background:var(--bg);
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.container{width:100%;max-width:1120px;margin:0 auto;padding:0 20px}
+
+h1,h2,h3{line-height:1.15;margin:0}
+h2.section-title{
+  font-size:clamp(1.6rem,4.5vw,2.5rem);
+  font-weight:800;
+  color:var(--navy);
+  text-align:center;
+  letter-spacing:-.5px;
+}
+.section-sub{
+  text-align:center;color:var(--muted);max-width:640px;margin:12px auto 0;font-size:1.02rem;
+}
+section{padding:64px 0}
+.section-alt{background:linear-gradient(180deg,#ffffff, #eef6fc)}
+
+/* ---------- Buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  font-weight:700;font-size:1.02rem;
+  padding:15px 26px;border-radius:999px;border:0;cursor:pointer;
+  transition:transform .12s ease, box-shadow .12s ease, filter .12s ease;
+  text-align:center;line-height:1.1;
+}
+.btn:active{transform:translateY(1px)}
+.btn-primary{background:linear-gradient(135deg,var(--orange),var(--orange-2));color:#fff;box-shadow:0 10px 24px rgba(246,166,35,.45)}
+.btn-primary:hover{filter:brightness(1.05);box-shadow:0 14px 30px rgba(246,166,35,.55)}
+.btn-wa{background:#25D366;color:#fff;box-shadow:0 10px 24px rgba(37,211,102,.4)}
+.btn-wa:hover{filter:brightness(1.05)}
+.btn-ghost{background:rgba(255,255,255,.15);color:#fff;border:2px solid rgba(255,255,255,.6);backdrop-filter:blur(4px)}
+.btn-ghost:hover{background:rgba(255,255,255,.25)}
+.btn svg{width:20px;height:20px;flex:none}
+
+/* ---------- Hero ---------- */
+.hero{
+  position:relative;color:#fff;overflow:hidden;
+  background:
+    radial-gradient(1200px 600px at 80% -10%, rgba(56,167,224,.55), transparent 60%),
+    linear-gradient(160deg,#0b3d66 0%, #10517f 45%, #1785b8 100%);
+  padding:0;
+}
+.hero-inner{
+  display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center;
+  padding:84px 0 76px;
+}
+.hero-badges{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:20px}
+.pill{
+  display:inline-flex;align-items:center;gap:7px;
+  background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.28);
+  padding:7px 14px;border-radius:999px;font-size:.86rem;font-weight:600;
+}
+.pill svg{width:16px;height:16px}
+.hero h1{
+  font-size:clamp(2.1rem,6vw,3.6rem);font-weight:900;letter-spacing:-1px;
+  text-shadow:0 3px 16px rgba(0,0,0,.25);
+}
+.hero h1 .accent{color:var(--orange)}
+.hero-tag{
+  display:inline-block;margin:14px 0 6px;background:var(--orange);color:#0b3d66;
+  font-weight:800;padding:6px 16px;border-radius:8px;transform:rotate(-1.5deg);
+  font-size:clamp(1rem,3vw,1.25rem);box-shadow:0 6px 16px rgba(0,0,0,.2);
+}
+.hero p.lead{font-size:1.08rem;color:#dbeefb;margin:18px 0 0;max-width:520px}
+.hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px}
+
+.price-card{
+  background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);
+  border-radius:26px;padding:30px;text-align:center;backdrop-filter:blur(8px);
+  box-shadow:var(--shadow-lg);
+}
+.price-card .from{font-size:.95rem;color:#cfe7f7;font-weight:600;letter-spacing:1px;text-transform:uppercase}
+.price-card .amount{font-size:clamp(3rem,9vw,4.6rem);font-weight:900;line-height:1;margin:6px 0}
+.price-card .amount span{color:var(--orange)}
+.price-card .inc{font-size:1rem;color:#eaf5fd;font-weight:600;margin-bottom:18px}
+.price-card .stock{
+  display:inline-flex;align-items:center;gap:8px;background:rgba(246,166,35,.2);
+  border:1px solid rgba(246,166,35,.5);color:#ffd479;
+  padding:8px 16px;border-radius:999px;font-weight:700;font-size:.92rem;
+}
+.stock .dot{width:9px;height:9px;border-radius:50%;background:var(--orange);box-shadow:0 0 0 0 rgba(246,166,35,.7);animation:pulse 1.8s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(246,166,35,.6)}70%{box-shadow:0 0 0 10px rgba(246,166,35,0)}100%{box-shadow:0 0 0 0 rgba(246,166,35,0)}}
+
+/* Countdown */
+.countdown{display:flex;gap:10px;justify-content:center;margin-top:20px}
+.cd-box{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.22);border-radius:14px;padding:10px 6px;min-width:62px}
+.cd-box b{display:block;font-size:1.6rem;font-weight:800;line-height:1}
+.cd-box small{font-size:.68rem;text-transform:uppercase;letter-spacing:1px;color:#cfe7f7}
+
+.wave{display:block;width:100%;height:auto;margin-top:-2px}
+
+/* ---------- Detail cards ---------- */
+.detail-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;margin-top:44px}
+.detail{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:24px 16px;text-align:center;box-shadow:var(--shadow);transition:transform .15s ease,box-shadow .15s ease;
+}
+.detail:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+.detail .ico{
+  width:56px;height:56px;margin:0 auto 12px;border-radius:16px;
+  display:flex;align-items:center;justify-content:center;
+  background:linear-gradient(135deg,#e7f4fd,#d3ebfa);color:var(--blue);
+}
+.detail .ico svg{width:30px;height:30px}
+.detail h3{font-size:.95rem;color:var(--muted);font-weight:600;margin-bottom:4px}
+.detail b{font-size:1.05rem;color:var(--navy);font-weight:700;display:block}
+
+/* ---------- Program timeline ---------- */
+.timeline{max-width:760px;margin:44px auto 0;position:relative;padding-left:8px}
+.timeline::before{content:"";position:absolute;left:22px;top:8px;bottom:8px;width:3px;background:linear-gradient(var(--blue-light),var(--orange))}
+.tl-item{position:relative;padding:0 0 26px 64px}
+.tl-item:last-child{padding-bottom:0}
+.tl-dot{
+  position:absolute;left:6px;top:2px;width:36px;height:36px;border-radius:50%;
+  background:#fff;border:3px solid var(--blue);display:flex;align-items:center;justify-content:center;
+  color:var(--blue);box-shadow:0 4px 10px rgba(31,127,196,.25);z-index:1;
+}
+.tl-dot svg{width:18px;height:18px}
+.tl-time{font-weight:800;color:var(--orange-2);font-size:.95rem}
+.tl-item h3{font-size:1.1rem;color:var(--navy);margin:2px 0 3px}
+.tl-item p{margin:0;color:var(--muted);font-size:.96rem}
+
+/* ---------- Gallery ---------- */
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:44px}
+.gcard{
+  position:relative;border-radius:var(--radius);overflow:hidden;height:260px;
+  box-shadow:var(--shadow);color:#fff;display:flex;align-items:flex-end;
+}
+.gcard .ph{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
+.gcard .ph svg{width:64px;height:64px;opacity:.9}
+.gcard.g1{background:linear-gradient(160deg,#1bb2b5,#0e7a86)}
+.gcard.g2{background:linear-gradient(160deg,#f6a623,#e2711d)}
+.gcard.g3{background:linear-gradient(160deg,#1f7fc4,#0b3d66)}
+.gcard img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.gcard .cap{position:relative;z-index:2;width:100%;padding:18px;font-weight:800;font-size:1.15rem;
+  background:linear-gradient(transparent,rgba(0,0,0,.55))}
+
+/* ---------- Reviews ---------- */
+.reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:44px}
+.review{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow)}
+.stars{color:var(--orange);font-size:1.05rem;letter-spacing:2px}
+.review p{margin:12px 0 16px;color:#33475b;font-size:.98rem}
+.review .who{display:flex;align-items:center;gap:12px}
+.avatar{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,var(--blue-light),var(--navy));
+  color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800}
+.review .who b{color:var(--navy);font-size:.95rem}
+.review .who small{color:var(--muted);display:block;font-weight:500}
+
+/* ---------- Form ---------- */
+.form-wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:start;margin-top:44px}
+.form-card{background:var(--card);border:1px solid var(--line);border-radius:26px;padding:32px;box-shadow:var(--shadow-lg)}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.field{margin-bottom:16px}
+.field label{display:block;font-weight:600;font-size:.9rem;color:var(--navy);margin-bottom:6px}
+.field label .req{color:#e0483a}
+.field input,.field select,.field textarea{
+  width:100%;padding:13px 15px;border:1.5px solid var(--line);border-radius:12px;
+  font-family:inherit;font-size:1rem;color:var(--ink);background:#fbfdff;transition:border-color .15s,box-shadow .15s;
+}
+.field input:focus,.field select:focus,.field textarea:focus{
+  outline:none;border-color:var(--blue-light);box-shadow:0 0 0 4px rgba(56,167,224,.15)
+}
+.field textarea{resize:vertical;min-height:76px}
+.pay-options{display:grid;gap:10px}
+.pay-opt{display:flex;align-items:center;gap:12px;padding:13px 15px;border:1.5px solid var(--line);border-radius:12px;cursor:pointer;transition:.15s;background:#fbfdff}
+.pay-opt:hover{border-color:var(--sky)}
+.pay-opt input{width:auto;accent-color:var(--blue)}
+.pay-opt.checked{border-color:var(--blue);background:#eef7fd}
+.pay-opt span{font-weight:600;color:var(--navy);font-size:.96rem}
+.form-note{font-size:.82rem;color:var(--muted);text-align:center;margin-top:14px}
+.form-side{display:flex;flex-direction:column;gap:16px}
+.side-card{background:linear-gradient(160deg,var(--navy),#114a78);color:#fff;border-radius:22px;padding:26px;box-shadow:var(--shadow)}
+.side-card h3{font-size:1.2rem;margin-bottom:14px}
+.side-card ul{list-style:none;padding:0;margin:0;display:grid;gap:12px}
+.side-card li{display:flex;gap:12px;align-items:flex-start;font-size:.96rem;color:#e5f2fb}
+.side-card li svg{width:20px;height:20px;flex:none;color:var(--orange);margin-top:2px}
+.or-wa{background:#eafaf0;border:1px dashed #25D366;border-radius:22px;padding:22px;text-align:center}
+.or-wa p{margin:0 0 12px;font-weight:600;color:#0b6b34}
+
+/* Success message */
+.toast{
+  position:fixed;left:50%;bottom:26px;transform:translateX(-50%) translateY(140%);
+  background:var(--navy);color:#fff;padding:16px 22px;border-radius:14px;box-shadow:var(--shadow-lg);
+  max-width:90%;width:440px;z-index:120;transition:transform .35s cubic-bezier(.2,.9,.3,1.3);
+  display:flex;gap:12px;align-items:flex-start;
+}
+.toast.show{transform:translateX(-50%) translateY(0)}
+.toast svg{width:24px;height:24px;color:#4ade80;flex:none}
+.toast b{display:block;margin-bottom:2px}
+.toast small{color:#c7ddef;font-size:.86rem;line-height:1.45}
+
+/* ---------- FAQ ---------- */
+.faq{max-width:760px;margin:40px auto 0}
+.faq details{background:var(--card);border:1px solid var(--line);border-radius:14px;margin-bottom:12px;box-shadow:0 4px 14px rgba(11,61,102,.05);overflow:hidden}
+.faq summary{list-style:none;cursor:pointer;padding:18px 22px;font-weight:700;color:var(--navy);
+  display:flex;justify-content:space-between;align-items:center;gap:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary .plus{width:26px;height:26px;flex:none;border-radius:50%;background:#eef7fd;color:var(--blue);
+  display:flex;align-items:center;justify-content:center;font-size:1.3rem;transition:transform .2s;font-weight:400}
+.faq details[open] summary .plus{transform:rotate(45deg)}
+.faq .ans{padding:0 22px 18px;color:var(--muted);margin:0}
+
+/* ---------- Final CTA ---------- */
+.final-cta{background:linear-gradient(160deg,#0b3d66,#1785b8);color:#fff;text-align:center;border-radius:0}
+.final-cta h2{color:#fff}
+.final-cta .section-sub{color:#d5ecfa}
+.final-cta .hero-cta{justify-content:center;margin-top:26px}
+
+/* ---------- Footer ---------- */
+footer{background:var(--navy-2);color:#b9d3e6;padding:40px 0;text-align:center;font-size:.92rem}
+footer b{color:#fff}
+footer a{color:var(--orange);font-weight:600}
+footer .fnav{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;margin:14px 0 18px}
+footer .fnav a{color:#cfe2f0}
+
+/* ---------- Floating WA ---------- */
+.fab{
+  position:fixed;right:20px;bottom:20px;z-index:110;
+  width:60px;height:60px;border-radius:50%;background:#25D366;color:#fff;
+  display:flex;align-items:center;justify-content:center;box-shadow:0 10px 26px rgba(37,211,102,.5);
+  animation:float 2.6s ease-in-out infinite;
+}
+.fab svg{width:32px;height:32px}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+
+/* ---------- Sticky mobile CTA ---------- */
+.mobile-bar{
+  position:fixed;left:0;right:0;bottom:0;z-index:100;display:none;
+  gap:10px;padding:10px 14px;background:rgba(255,255,255,.97);
+  box-shadow:0 -8px 24px rgba(11,61,102,.14);border-top:1px solid var(--line);
+}
+.mobile-bar .btn{flex:1;padding:13px 10px;font-size:.95rem}
+
+/* ---------- Responsive ---------- */
+@media(max-width:920px){
+  .hero-inner{grid-template-columns:1fr;gap:30px;padding:60px 0 56px}
+  .price-card{max-width:420px;margin:0 auto}
+  .detail-grid{grid-template-columns:repeat(2,1fr)}
+  .form-wrap{grid-template-columns:1fr}
+  .gallery,.reviews{grid-template-columns:1fr}
+}
+@media(max-width:600px){
+  section{padding:48px 0}
+  .form-row{grid-template-columns:1fr}
+  .form-card{padding:22px}
+  .detail-grid{gap:12px}
+  .fab{bottom:76px}
+  .mobile-bar{display:flex}
+  body{padding-bottom:70px}
+  .gallery{grid-template-columns:1fr 1fr}
+  .gcard{height:180px}
+  .hero-cta .btn{flex:1}
+}
+</style>
+</head>
+<body>
+
+<!-- ================= HERO ================= -->
+<header class="hero" id="ust">
+  <div class="container">
+    <div class="hero-inner">
+      <div>
+        <div class="hero-badges">
+          <span class="pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-5.5-7-11a7 7 0 0114 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg> Manavgat Irmağı · Boğaz · Side</span>
+          <span class="pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> Günübirlik Tur</span>
+        </div>
+
+        <h1>Isparta – Manavgat<br><span class="accent">Yemekli Bot Turu</span></h1>
+        <div class="hero-tag">🍽️ Yemekli · Ulaşım + Bot + Yemek Dahil</div>
+
+        <p class="lead">Manavgat Irmağı, Boğaz ve Side rotasında unutulmaz bir günübirlik tatil.
+          Sabah 07.00'de Isparta'dan hareket, 10.00 – 18.00 arası keyifli bir bot turu.</p>
+
+        <div class="hero-cta">
+          <a href="#kayit" class="btn btn-primary">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+            Hemen Kayıt Ol
+          </a>
+          <a href="#" class="btn btn-wa" data-wa="info">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.1-.7.2-.2.3-.7 1-.9 1.2-.2.2-.3.2-.6.1-1.6-.8-2.7-1.5-3.8-3.4-.3-.5.3-.5.8-1.5.1-.2 0-.3 0-.5s-.7-1.6-.9-2.2c-.2-.5-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.3 5.1 4.6 1.9.8 2.6.9 3.5.8.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3z"/><path d="M12 2a10 10 0 00-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1012 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-2.9.8.8-2.8-.2-.3A8.2 8.2 0 1112 20.2z"/></svg>
+            WhatsApp'tan Bilgi Al
+          </a>
+        </div>
+      </div>
+
+      <div class="price-card">
+        <div class="from">Kişi Başı</div>
+        <div class="amount"><span id="priceMain">2450</span>₺</div>
+        <div class="inc">Ulaşım + Bot + Yemek Dahil</div>
+        <div class="stock"><span class="dot"></span> Son <b id="seatsLeft">12</b> koltuk kaldı!</div>
+        <div class="countdown" id="countdown" aria-label="Tura kalan süre">
+          <div class="cd-box"><b id="cd-d">0</b><small>Gün</small></div>
+          <div class="cd-box"><b id="cd-h">0</b><small>Saat</small></div>
+          <div class="cd-box"><b id="cd-m">0</b><small>Dakika</small></div>
+          <div class="cd-box"><b id="cd-s">0</b><small>Saniye</small></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <svg class="wave" viewBox="0 0 1440 80" preserveAspectRatio="none"><path fill="#f2f8fc" d="M0,40 C240,90 480,0 720,30 C960,60 1200,90 1440,40 L1440,80 L0,80 Z"/></svg>
+</header>
+
+<!-- ================= TUR DETAYLARI ================= -->
+<section id="detaylar">
+  <div class="container">
+    <h2 class="section-title">Tur Detayları</h2>
+    <p class="section-sub">Kısa ve net — bilmeniz gereken her şey tek bakışta.</p>
+    <div class="detail-grid">
+      <div class="detail">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="12" rx="2"/><path d="M3 11h18M7 17v2M17 17v2"/><circle cx="7.5" cy="14" r="1"/><circle cx="16.5" cy="14" r="1"/></svg></div>
+        <h3>Hareket</h3><b>Sabah 07.00<br>Isparta'dan Otobüs</b>
+      </div>
+      <div class="detail">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 17s2-1 4 0 4 0 6 0 4-1 6 0"/><path d="M5 17l1.5-6h11L19 17"/><path d="M9 11V6h6v5"/></svg></div>
+        <h3>Bot Turu</h3><b>10.00 – 18.00<br>Arası</b>
+      </div>
+      <div class="detail">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-5.5-7-11a7 7 0 0114 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></div>
+        <h3>Rota</h3><b>Irmak – Boğaz<br>Side – Dönüş</b>
+      </div>
+      <div class="detail">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12h16M6 12c0-4 2-7 6-7s6 3 6 7"/><path d="M8 12l1.5 4.5a2 2 0 001.9 1.5h1.2a2 2 0 001.9-1.5L16 12"/></svg></div>
+        <h3>Dahil</h3><b>Ulaşım · Bot<br>Yemek</b>
+      </div>
+      <div class="detail">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+        <h3>Fiyat</h3><b>2450₺<br>Kişi Başı</b>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROGRAM AKIŞI ================= -->
+<section class="section-alt" id="program">
+  <div class="container">
+    <h2 class="section-title">Gün İçinde Program</h2>
+    <p class="section-sub">Saat saat ne yapacağımızı önceden bilin, kafanızda soru işareti kalmasın.</p>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="6" width="18" height="11" rx="2"/><path d="M3 11h18M7 17v2M17 17v2"/></svg></div>
+        <div class="tl-time">07.00</div><h3>Isparta'dan Hareket</h3>
+        <p>Konforlu otobüsümüzle Isparta'dan yola çıkıyoruz.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 17s2-1 4 0 4 0 6 0 4-1 6 0"/><path d="M6 17l1.5-6h9L18 17"/></svg></div>
+        <div class="tl-time">10.00</div><h3>Manavgat Bot Turu Başlangıcı</h3>
+        <p>Manavgat'a varış ve bot turumuzun başlaması.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 20c3-2 5 2 9 0s6 2 9 0"/><path d="M6 15V8l6-4 6 4v7"/></svg></div>
+        <div class="tl-time">Öğlen</div><h3>Manavgat Irmağı</h3>
+        <p>Eşsiz doğa ve manzara turu, ırmağın serinliği.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v18M4 8h16M4 16h16"/></svg></div>
+        <div class="tl-time">Gündüz</div><h3>Boğaz</h3>
+        <p>Deniz ve ırmağın birleştiği eşsiz bölge.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 21h16M6 21V9m4 12V9m4 12V9m4 12V9M4 9l8-5 8 5"/></svg></div>
+        <div class="tl-time">İkindi</div><h3>Side</h3>
+        <p>Tarihi Side'nin muhteşem manzaraları ve antik dokusu.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 17s2-1 4 0 4 0 6 0 4-1 6 0"/><path d="M6 17l1.5-6h9L18 17"/></svg></div>
+        <div class="tl-time">18.00</div><h3>Bot Turu Dönüş</h3>
+        <p>Doyasıya keyfin ardından bot turumuzun tamamlanması.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M12 3a9 9 0 100 18M3 12a9 9 0 019-9"/></svg></div>
+        <div class="tl-time">Akşam</div><h3>Isparta'ya Dönüş</h3>
+        <p>Güzel anılarla Isparta'ya dönüş yolculuğu.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= GALERİ ================= -->
+<section id="galeri">
+  <div class="container">
+    <h2 class="section-title">Sizi Neler Bekliyor?</h2>
+    <p class="section-sub">Eşsiz doğa, lezzetli yemek ve Side'nin güzellikleri bir arada.</p>
+    <div class="gallery">
+      <!-- Gerçek fotoğraf eklemek için: <img src="foto.jpg" alt="..."> etiketini .ph div'inin yerine koyun -->
+      <div class="gcard g1">
+        <div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 20c3-2 5 2 9 0s6 2 9 0"/><path d="M6 15c0-5 2-9 6-9s6 4 6 9"/><circle cx="17" cy="6" r="2"/></svg></div>
+        <div class="cap">🌿 Eşsiz Doğa</div>
+      </div>
+      <div class="gcard g2">
+        <div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 3v7a3 3 0 006 0V3M7 3v18M17 3c-2 0-3 2-3 5s1 4 3 4v9"/></svg></div>
+        <div class="cap">🍽️ Lezzetli Yemek</div>
+      </div>
+      <div class="gcard g3">
+        <div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 21h16M6 21V9m4 12V9m4 12V9m4 12V9M4 9l8-5 8 5"/></svg></div>
+        <div class="cap">🏛️ Side'nin Güzellikleri</div>
+      </div>
+    </div>
+    <p class="form-note" style="margin-top:18px">📸 Gerçek tur fotoğraflarınızı ekleyerek güveni artırabilirsiniz — dosyada belirtilen yere fotoğraf koymanız yeterli.</p>
+  </div>
+</section>
+
+<!-- ================= KAYIT FORMU ================= -->
+<section class="section-alt" id="kayit">
+  <div class="container">
+    <h2 class="section-title">Hemen Kayıt Ol</h2>
+    <p class="section-sub">Bilgilerinizi doldurun, tek tıkla WhatsApp üzerinden bize ulaşsın. Ekibimiz sizinle iletişime geçsin.</p>
+
+    <div class="form-wrap">
+      <div class="form-card">
+        <form id="kayitForm" novalidate>
+          <div class="form-row">
+            <div class="field">
+              <label>Ad Soyad <span class="req">*</span></label>
+              <input type="text" name="ad" placeholder="Adınız Soyadınız" required />
+            </div>
+            <div class="field">
+              <label>Telefon Numarası <span class="req">*</span></label>
+              <input type="tel" name="tel" placeholder="05XX XXX XX XX" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label>Kişi Sayısı <span class="req">*</span></label>
+              <input type="number" name="kisi" min="1" value="1" required />
+            </div>
+            <div class="field">
+              <label>Biniş Noktası</label>
+              <input type="text" name="binis" placeholder="Örn. Isparta Merkez / Otogar" />
+            </div>
+          </div>
+          <div class="field">
+            <label>Not / Özel Talep</label>
+            <textarea name="not" placeholder="Belirtmek istediğiniz bir şey var mı?"></textarea>
+          </div>
+          <div class="field">
+            <label>Ödeme Tercihi</label>
+            <div class="pay-options">
+              <label class="pay-opt checked"><input type="radio" name="odeme" value="Kapora" checked /><span>Kapora ile yer ayırt</span></label>
+              <label class="pay-opt"><input type="radio" name="odeme" value="Tam Ödeme" /><span>Tam ödeme yapacağım</span></label>
+              <label class="pay-opt"><input type="radio" name="odeme" value="WhatsApp ile görüşmek istiyorum" /><span>Önce WhatsApp'tan görüşmek istiyorum</span></label>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-wa" style="width:100%;margin-top:6px">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.1-.7.2-.2.3-.7 1-.9 1.2-.2.2-.3.2-.6.1-1.6-.8-2.7-1.5-3.8-3.4-.3-.5.3-.5.8-1.5.1-.2 0-.3 0-.5s-.7-1.6-.9-2.2c-.2-.5-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.3 5.1 4.6 1.9.8 2.6.9 3.5.8.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3z"/><path d="M12 2a10 10 0 00-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1012 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-2.9.8.8-2.8-.2-.3A8.2 8.2 0 1112 20.2z"/></svg>
+            Kaydı WhatsApp'tan Gönder
+          </button>
+          <p class="form-note">Gönder'e bastığınızda bilgileriniz hazır bir mesaj olarak WhatsApp'ta açılır. Mesajı bize göndermeniz yeterli. 🔒 Online ödeme alınmaz.</p>
+        </form>
+      </div>
+
+      <div class="form-side">
+        <div class="side-card">
+          <h3>Neden Bu Tur?</h3>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> Ulaşım, bot turu ve yemek fiyata dahil</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> Kapı önünden konforlu otobüs ulaşımı</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> Manavgat Irmağı, Boğaz ve Side rotası</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> Kontenjan sınırlı — erken kayıt avantajı</li>
+          </ul>
+        </div>
+        <div class="or-wa">
+          <p>Form doldurmak istemiyor musunuz?</p>
+          <a href="#" class="btn btn-wa" style="width:100%" data-wa="register">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1012 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-2.9.8.8-2.8-.2-.3A8.2 8.2 0 1112 20.2zm4.5-6.8c-.3-.2-1.7-.9-2-1-.3-.1-.5-.1-.7.2-.2.3-.7 1-.9 1.2-.2.2-.3.2-.6.1-1.6-.8-2.7-1.5-3.8-3.4-.3-.5.3-.5.8-1.5.1-.2 0-.3 0-.5s-.7-1.6-.9-2.2c-.2-.5-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.3 5.1 4.6 1.9.8 2.6.9 3.5.8.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4z"/></svg>
+            WhatsApp'tan Kayıt Ol
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= YORUMLAR ================= -->
+<section id="yorumlar">
+  <div class="container">
+    <h2 class="section-title">Katılımcılar Ne Diyor?</h2>
+    <p class="section-sub">Daha önce turumuza katılanların yorumları.</p>
+    <div class="reviews">
+      <div class="review">
+        <div class="stars">★★★★★</div>
+        <p>"Muhteşem bir gündü! Manavgat Irmağı inanılmazdı, yemekler çok lezzetliydi. Organizasyon kusursuzdu, herkese tavsiye ederim."</p>
+        <div class="who"><div class="avatar">AY</div><div><b>Ayşe Y.</b><small>Isparta</small></div></div>
+      </div>
+      <div class="review">
+        <div class="stars">★★★★★</div>
+        <p>"Ailecek katıldık, çocuklar bayıldı. Otobüs ulaşımı çok rahattı, Side gerçekten çok güzeldi. Fiyatına kesinlikle değer."</p>
+        <div class="who"><div class="avatar">MK</div><div><b>Mehmet K.</b><small>Isparta</small></div></div>
+      </div>
+      <div class="review">
+        <div class="stars">★★★★★</div>
+        <p>"Uzun zamandır böyle keyifli bir gün geçirmemiştim. Ekip çok ilgiliydi, bot turu boyunca manzara harikaydı. Tekrar geleceğiz!"</p>
+        <div class="who"><div class="avatar">ED</div><div><b>Elif D.</b><small>Isparta</small></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SSS ================= -->
+<section class="section-alt" id="sss">
+  <div class="container">
+    <h2 class="section-title">Sıkça Sorulan Sorular</h2>
+    <p class="section-sub">Aklınıza takılanlar burada. Başka sorunuz varsa WhatsApp'tan yazın.</p>
+    <div class="faq">
+      <details open>
+        <summary>Fiyata neler dahil? <span class="plus">+</span></summary>
+        <p class="ans">Ulaşım (Isparta – Manavgat gidiş-dönüş otobüs), bot turu ve yemek fiyata dahildir. Kişi başı 2450₺'dir.</p>
+      </details>
+      <details>
+        <summary>Hareket saati kaç? <span class="plus">+</span></summary>
+        <p class="ans">Sabah 07.00'de Isparta'dan otobüs ile hareket edilir. Biniş noktanızı kayıt sırasında belirtebilirsiniz.</p>
+      </details>
+      <details>
+        <summary>Tur kaçta başlıyor ve bitiyor? <span class="plus">+</span></summary>
+        <p class="ans">Bot turu 10.00 – 18.00 saatleri arasındadır. Akşam Isparta'ya dönüş yapılır.</p>
+      </details>
+      <details>
+        <summary>Ödeme nasıl yapılır? <span class="plus">+</span></summary>
+        <p class="ans">Kapora ile yer ayırtabilir veya tam ödeme yapabilirsiniz. Detayları WhatsApp üzerinden ekibimizle netleştirebilirsiniz. Site üzerinden online ödeme alınmaz.</p>
+      </details>
+      <details>
+        <summary>Kontenjan sınırlı mı? <span class="plus">+</span></summary>
+        <p class="ans">Evet, kayıtlar kontenjanla sınırlıdır. Yerinizi garantilemek için erken kayıt olmanızı öneririz.</p>
+      </details>
+      <details>
+        <summary>Rota neresi? <span class="plus">+</span></summary>
+        <p class="ans">Manavgat Irmağı – Boğaz – Side rotasında ilerliyor, ardından dönüş yapıyoruz.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FINAL CTA ================= -->
+<section class="final-cta">
+  <div class="container">
+    <h2 class="section-title">Yeriniz Sizi Bekliyor!</h2>
+    <p class="section-sub">Isparta'dan Manavgat'a keyifli bir günübirlik tatil için hemen kayıt olun. Kontenjan dolmadan yerinizi ayırtın.</p>
+    <div class="hero-cta">
+      <a href="#kayit" class="btn btn-primary">Hemen Kayıt Ol — 2450₺</a>
+      <a href="#" class="btn btn-ghost" data-wa="info">WhatsApp'tan Bilgi Al</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="container">
+    <b>Isparta – Manavgat Yemekli Bot Turu</b>
+    <div class="fnav">
+      <a href="#detaylar">Detaylar</a>
+      <a href="#program">Program</a>
+      <a href="#galeri">Galeri</a>
+      <a href="#kayit">Kayıt</a>
+      <a href="#sss">S.S.S</a>
+    </div>
+    <p>📞 İletişim &amp; Kayıt: <a href="#" data-wa="info" id="footPhone">WhatsApp</a> · Günübirlik keyifli bir tatil sizi bekliyor! ⛵</p>
+    <p style="opacity:.6;font-size:.82rem;margin-top:10px">© <span id="year"></span> Tüm hakları saklıdır.</p>
+  </div>
+</footer>
+
+<!-- Floating WhatsApp -->
+<a href="#" class="fab" data-wa="info" aria-label="WhatsApp'tan yaz">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1012 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-2.9.8.8-2.8-.2-.3A8.2 8.2 0 1112 20.2zm4.5-6.8c-.3-.2-1.7-.9-2-1-.3-.1-.5-.1-.7.2-.2.3-.7 1-.9 1.2-.2.2-.3.2-.6.1-1.6-.8-2.7-1.5-3.8-3.4-.3-.5.3-.5.8-1.5.1-.2 0-.3 0-.5s-.7-1.6-.9-2.2c-.2-.5-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.3 5.1 4.6 1.9.8 2.6.9 3.5.8.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4z"/></svg>
+</a>
+
+<!-- Mobile sticky bar -->
+<div class="mobile-bar">
+  <a href="#kayit" class="btn btn-primary">Kayıt Ol</a>
+  <a href="#" class="btn btn-wa" data-wa="info">WhatsApp</a>
+</div>
+
+<!-- Success toast -->
+<div class="toast" id="toast">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.1V12a10 10 0 11-5.9-9.1"/><path d="M22 4L12 14.1l-3-3"/></svg>
+  <div>
+    <b>Kaydınız hazırlandı!</b>
+    <small>WhatsApp açıldı — mesajı bize gönderin. Ekibimiz kısa süre içinde sizinle iletişime geçecektir.</small>
+  </div>
+</div>
+
+<script>
+/* =========================================================
+   ⚙️  AYARLAR — Burayı kendinize göre düzenleyin
+   ========================================================= */
+const CONFIG = {
+  // WhatsApp numarası: ülke kodu + numara, boşluksuz, + işareti OLMADAN.
+  // Örn. Türkiye 0532 123 45 67  ->  "905321234567"
+  whatsappNumber: "905XXXXXXXXX",
+
+  // Fiyat (₺)
+  price: "2450",
+
+  // Turun tarihi ve saati — geri sayım buna göre çalışır (YYYY-MM-DD HH:MM)
+  tourDate: "2026-07-19 07:00",
+
+  // Kontenjan
+  totalSeats: 50,
+  seatsLeft: 12,
+};
+
+/* ---------- WhatsApp mesaj şablonları ---------- */
+const WA_MESSAGES = {
+  info: "Merhaba, Isparta-Manavgat yemekli bot turu için kayıt yaptırmak istiyorum. Bilgi alabilir miyim?",
+  register: "Merhaba, Isparta-Manavgat yemekli bot turu için kayıt olmak istiyorum. Yardımcı olur musunuz?",
+};
+
+function waLink(text){
+  return "https://wa.me/" + CONFIG.whatsappNumber + "?text=" + encodeURIComponent(text);
+}
+
+/* ---------- WhatsApp butonları ---------- */
+document.querySelectorAll("[data-wa]").forEach(function(el){
+  el.addEventListener("click", function(e){
+    e.preventDefault();
+    var key = el.getAttribute("data-wa");
+    window.open(waLink(WA_MESSAGES[key] || WA_MESSAGES.info), "_blank");
+  });
+});
+
+/* ---------- Fiyat / kontenjan doldur ---------- */
+document.getElementById("priceMain").textContent = CONFIG.price;
+document.getElementById("seatsLeft").textContent = CONFIG.seatsLeft;
+document.getElementById("year").textContent = new Date().getFullYear();
+
+/* ---------- Ödeme seçeneği görsel işaretleme ---------- */
+document.querySelectorAll(".pay-opt input").forEach(function(inp){
+  inp.addEventListener("change", function(){
+    document.querySelectorAll(".pay-opt").forEach(function(o){o.classList.remove("checked")});
+    inp.closest(".pay-opt").classList.add("checked");
+  });
+});
+
+/* ---------- Form gönderimi -> WhatsApp mesajı ---------- */
+var form = document.getElementById("kayitForm");
+var toast = document.getElementById("toast");
+form.addEventListener("submit", function(e){
+  e.preventDefault();
+  var ad = form.ad.value.trim();
+  var tel = form.tel.value.trim();
+  if(!ad || !tel){
+    alert("Lütfen Ad Soyad ve Telefon alanlarını doldurun.");
+    return;
+  }
+  var kisi = form.kisi.value.trim() || "1";
+  var binis = form.binis.value.trim() || "-";
+  var notu = form.not.value.trim() || "-";
+  var odeme = (form.querySelector('input[name="odeme"]:checked') || {}).value || "-";
+
+  var msg =
+    "🚌⛵ *ISPARTA – MANAVGAT BOT TURU KAYDI*\n" +
+    "————————————\n" +
+    "👤 Ad Soyad: " + ad + "\n" +
+    "📞 Telefon: " + tel + "\n" +
+    "👥 Kişi Sayısı: " + kisi + "\n" +
+    "📍 Biniş Noktası: " + binis + "\n" +
+    "💳 Ödeme Tercihi: " + odeme + "\n" +
+    "📝 Not: " + notu + "\n" +
+    "————————————\n" +
+    "Kaydımı oluşturmak istiyorum. 🙏";
+
+  window.open(waLink(msg), "_blank");
+
+  // Başarı mesajı
+  toast.classList.add("show");
+  setTimeout(function(){ toast.classList.remove("show"); }, 6000);
+  form.reset();
+  document.querySelectorAll(".pay-opt").forEach(function(o){o.classList.remove("checked")});
+  document.querySelector(".pay-opt").classList.add("checked");
+});
+
+/* ---------- Geri sayım sayacı ---------- */
+(function(){
+  var target = new Date(CONFIG.tourDate.replace(" ", "T")).getTime();
+  var elD=document.getElementById("cd-d"),elH=document.getElementById("cd-h"),
+      elM=document.getElementById("cd-m"),elS=document.getElementById("cd-s");
+  function tick(){
+    var diff = target - new Date().getTime();
+    if(isNaN(target) || diff < 0){
+      elD.textContent=elH.textContent=elM.textContent=elS.textContent="0";
+      return;
+    }
+    var d=Math.floor(diff/86400000);
+    var h=Math.floor(diff%86400000/3600000);
+    var m=Math.floor(diff%3600000/60000);
+    var s=Math.floor(diff%60000/1000);
+    elD.textContent=d; elH.textContent=h; elM.textContent=m; elS.textContent=s;
+  }
+  tick(); setInterval(tick,1000);
+})();
+</script>
+</body>
+</html>
